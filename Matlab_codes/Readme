@@ -1,3 +1,13 @@
-Most of the codes have some help information.
+Matlab CQ codes accompanying the book
+
+Integral equation methods for evolutionary PDE:
+     A Convolution Quadrature approach
+
+
+Most of the codes have some help information and have been included in the book.
+
 Codes of the type tests_ch?.m contain examples from
 the book. These also show how to use the other .m files.
+
+
+L.Banjai 2022

@@ -1,1 +1,18 @@
-Codes will soon be added.
+Python CQ codes accompanying the book
+
+Integral equation methods for evolutionary PDE:
+     A Convolution Quadrature approach
+
+
+Files:
+
+cq_lms.py -- Library of functions for CQ based on linear multistep methods
+cq-lms_test.ipynb -- Jupyter notebook with tests illustrating the use of
+			the library
+
+
+RK codes soon to be added.
+
+
+L.Banjai 2022
+
