@@ -4,7 +4,7 @@ function u = evalCQ_real(g,Ks,N,T,dlt)
 %in the case of real u and g.
 %To solve a discrete convolution equation call with K^{-1}
 if (nargin < 5)
-    dlt = @(z) 2*(1-z)./(1+z); %trapezoid rule
+    dlt = @(z) 2*(1-z)./(1+z); %trapezoidal rule
 end
 dt = T/N; lam = 10^(-14/(2*N+1));
 ts = (0:N)*dt; lams = lam.^(0:N);

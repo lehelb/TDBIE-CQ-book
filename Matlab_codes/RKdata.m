@@ -5,6 +5,7 @@ function [A,b,c] = RKdata(RK)
 %RK = 1 for 3 stage Radau IIA
 %RK = 2 for 3 stage Lobatto IIIC
 %RK = 3 for 2 stage Gauss method
+%RK = 4 for 3 stage Gauss
 
 if (RK==0)
     %radau IIa of order 3 stage order 2
@@ -29,7 +30,11 @@ elseif (RK==3)
     a = sqrt(3)/6; c = [1/2-a; 1/2+a];
     A = [1/4 1/4-a; 1/4+a 1/4];
     b = [1/2; 1/2];
+elseif (RK==4)
+    a = sqrt(15)/5; c = [1/2-a/2; 1/2; 1/2+a/2];
+    A = [5/36 2/9-a/3 5/36-a/6; 5/36+a*5/24 2/9 5/36-a*5/24; 5/36+a/6 2/9+a/3 5/36];
+    b = [5/18; 4/9; 5/18];
 else
-    fprintf('only RK types 0, 1,...,3  possible, see help\n');
+    fprintf('only RK types 0, 1,...,4  possible, see help\n');
     return;
 end
